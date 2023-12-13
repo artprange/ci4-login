@@ -8,14 +8,18 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 
-$routes->get('/', 'Home::index');
-$routes->get('products/list', 'Products::list');
-$routes->post('products/add', 'Products::create');
-$routes->get('products/delete/(:num)', 'Products::delete/$1');
+ $routes->get('/', 'Home::index');
+ $routes->get('products/list', 'Products::list');
+ $routes->post('products/add', 'Products::create');
+ $routes->get('products/delete/(:num)', 'Products::delete/$1');
+ $routes->get('products/edit/(:num)', 'Products::edit/$1');
 
-$routes->get('products/edit/(:num)', 'Products::edit/$1');
-$routes->post('products/edit/(:num)', 'Products::createOrUpdate/$1');
+ $routes->post('products/update/(:num)', 'Products::update/$1');
+ 
 
-$routes->post('products/add', 'Products::createOrUpdate');
+ 
+
+
+
 
 

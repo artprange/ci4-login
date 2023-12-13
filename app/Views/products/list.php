@@ -76,17 +76,17 @@
                             </thead>
                             <tbody>
                             <?php foreach ($products as $product): ?>
-                                <tr>
-                                    <td><?= $product['ProductId'] ?></td>
-                                    <td><?= $product['Name'] ?></td>
-                                    <td><?= $product['Quantity'] ?></td>
-                                    <td><?= $product['Amount'] ?></td>
-                                    <td>
-                                         <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editModal<?= $product['ProductId'] ?>">Edit</a>
-                                         <a href="<?= base_url('products/delete/' . $product['ProductId']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+            <tr>
+                <td><?= $product['ProductId'] ?></td>
+                <td><?= $product['Name'] ?></td>
+                <td><?= $product['Quantity'] ?></td>
+                <td><?= $product['Amount'] ?></td>
+                <td>
+                    <a href="<?= base_url('products/edit/' . $product['ProductId']) ?>" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="<?= base_url('products/delete/' . $product['ProductId']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
 
                                         
                                         
@@ -102,3 +102,9 @@
 </div>
 <!-- /.content -->
 </div>
+
+<script src="<?= base_url('theme/plugins/jquery/jquery.min.js') ?>"></script>
+<!-- Bootstrap 4 -->
+<script src="<?= base_url('theme/plugins/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+<!-- AdminLTE App -->
+<script src="<?= base_url('theme/dist/js/adminlte.min.js') ?>"></script>
